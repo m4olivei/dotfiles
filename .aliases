@@ -27,6 +27,7 @@ alias l="ls -lF ${colorflag}"
 
 # List all files colorized in long format, including dot files
 alias la="ls -laF ${colorflag}"
+alias ll="ls -laF ${colorflag}"
 
 # List only directories
 alias lsd="ls -lF ${colorflag} | grep --color=never '^d'"
@@ -145,3 +146,10 @@ alias reload="exec $SHELL -l"
 
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
+
+# Git shortcuts
+alias gl="git log --date=local --pretty=format:\"%Cgreen%h%Creset - %an, %ad : %Cblue%s%Creset\""
+alias gsf="git show --date=local --pretty=format:\"%Cgreen%h%Creset - %an, %ad : %Cblue%s%Creset\" --name-only"
+
+# Run the iPhone simulator
+alias iphonesim="open /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
